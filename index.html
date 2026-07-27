@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AB Signal delivers AI-scored crypto trading signals to Telegram with exact entry, stop loss, and 3-tier take-profit levels."
+    />
+    <title>AB Signal — Premium Crypto Signal Service</title>
+    <style>
+      :root {
+        --bg: #04070b;
+        --bg-soft: rgba(13, 20, 28, 0.9);
+        --surface: #0b1218;
+        --surface-2: #101a23;
+        --text: #f5f7fb;
+        --muted: #94a3b8;
+        --accent: #2ef0a3;
+        --accent-strong: #1fd58c;
+        --accent-soft: rgba(46, 240, 163, 0.16);
+        --border: rgba(255, 255, 255, 0.08);
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        --radius: 24px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(46, 240, 163, 0.14), transparent 26%),
+          linear-gradient(180deg, #060910 0%, var(--bg) 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 0.55rem 0 0.95rem;
+      }
+
+      .hero__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2rem 0 0.8rem;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 0.82rem;
+        color: #c9d4e0;
+      }
+
+      .brand__dot {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), #7bfcc7);
+        box-shadow: 0 0 20px rgba(46, 240, 163, 0.55);
+      }
+
+      .hero__content {
+        display: grid;
+        gap: 0.55rem;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 0.7rem;
+        border: 1px solid rgba(46, 240, 163, 0.24);
+        background: rgba(46, 240, 163, 0.08);
+        color: #bff9df;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        width: fit-content;
+      }
+
+      h1 {
+        font-size: clamp(1.7rem, 5vw, 3rem);
+        line-height: 1.02;
+        margin: 0 0 0.3rem;
+        letter-spacing: -0.03em;
+        max-width: 11ch;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin: 0;
+        max-width: 60ch;
+      }
+
+      .hero__cta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        margin-top: 0.45rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.85rem 1.05rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn--primary {
+        background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+        color: #02120b;
+        box-shadow: 0 10px 30px rgba(46, 240, 163, 0.24);
+      }
+
+      .btn--primary:hover {
+        box-shadow: 0 14px 36px rgba(46, 240, 163, 0.3);
+      }
+
+      .trust-line {
+        color: #8ea1b2;
+        font-size: 0.93rem;
+      }
+
+      .panel {
+        background: linear-gradient(180deg, rgba(13, 20, 28, 0.96), rgba(8, 14, 19, 0.96));
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .section {
+        padding: 1.4rem 0 0.2rem;
+      }
+
+      .section__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 1rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .section__heading h2 {
+        font-size: clamp(1.2rem, 3vw, 1.55rem);
+        margin: 0;
+      }
+
+      .section__heading p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .steps {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .step {
+        padding: 1rem;
+        border-radius: 20px;
+        background: rgba(10, 17, 24, 0.95);
+        border: 1px solid var(--border);
+      }
+
+      .step__number {
+        width: 2rem;
+        height: 2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+      }
+
+      .step h3 {
+        margin: 0 0 0.35rem;
+        font-size: 1rem;
+      }
+
+      .step p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .sample-card {
+        padding: 0.7rem;
+        background: linear-gradient(145deg, rgba(14, 23, 30, 0.99), rgba(8, 14, 19, 0.99));
+        border: 1px solid rgba(46, 240, 163, 0.24);
+        box-shadow: 0 16px 54px rgba(8, 17, 24, 0.42), 0 0 0 1px rgba(46, 240, 163, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      }
+
+      .sample-card__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.8rem;
+      }
+
+      .sample-card__header strong {
+        font-size: 0.95rem;
+      }
+
+      .sample-badge {
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .telegram-bubble {
+        background: #0d1720;
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 16px;
+        padding: 0.7rem;
+      }
+
+      .telegram-bubble p {
+        margin: 0.16rem 0;
+        color: #e7edf5;
+        font-size: 0.84rem;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.45rem;
+      }
+
+      .pill {
+        display: inline-flex;
+        padding: 0.3rem 0.6rem;
+        border-radius: 999px;
+        background: rgba(46, 240, 163, 0.1);
+        color: #bff9df;
+        font-size: 0.76rem;
+        border: 1px solid rgba(46, 240, 163, 0.18);
+      }
+
+      .features {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .feature {
+        padding: 1rem;
+        border-radius: 18px;
+        background: rgba(10, 17, 24, 0.95);
+        border: 1px solid var(--border);
+      }
+
+      .feature__icon {
+        width: 2.3rem;
+        height: 2.3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: rgba(46, 240, 163, 0.12);
+        margin-bottom: 0.65rem;
+      }
+
+      .feature h3 {
+        margin: 0 0 0.35rem;
+        font-size: 1rem;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.93rem;
+      }
+
+      .pricing {
+        padding: 1.15rem;
+        background: linear-gradient(150deg, rgba(17, 28, 37, 0.97), rgba(8, 13, 17, 0.97));
+      }
+
+      .price {
+        font-size: clamp(2rem, 4vw, 2.7rem);
+        font-weight: 700;
+        margin: 0.25rem 0 0.6rem;
+      }
+
+      .pricing ul {
+        padding-left: 1.1rem;
+        margin: 0.8rem 0 1rem;
+        color: var(--muted);
+      }
+
+      .pricing li + li {
+        margin-top: 0.4rem;
+      }
+
+      .faq details {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 0.9rem 1rem;
+        background: rgba(10, 17, 24, 0.95);
+      }
+
+      .faq details + details {
+        margin-top: 0.7rem;
+      }
+
+      .faq summary {
+        cursor: pointer;
+        font-weight: 600;
+        list-style: none;
+      }
+
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq p {
+        margin: 0.7rem 0 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      footer {
+        padding: 2.2rem 0 2.6rem;
+      }
+
+      .disclaimer {
+        padding: 1rem;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 127, 80, 0.16);
+        background: rgba(255, 127, 80, 0.06);
+        color: #d8c0ad;
+        font-size: 0.95rem;
+      }
+
+      .copyright {
+        margin-top: 0.9rem;
+        color: #70808e;
+        font-size: 0.84rem;
+      }
+
+      @media (min-width: 760px) {
+        .hero {
+          padding-top: 1.2rem;
+        }
+
+        .hero__content {
+          grid-template-columns: 1.2fr 0.8fr;
+          gap: 1.6rem;
+        }
+
+        .steps {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .features {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .pricing {
+          max-width: 540px;
+        }
+      }
+
+      @media (max-width: 390px) {
+        .hero {
+          padding-top: 0.2rem;
+          padding-bottom: 0.55rem;
+        }
+
+        .hero__top {
+          padding-bottom: 0.35rem;
+        }
+
+        .hero__content {
+          gap: 0.35rem;
+        }
+
+        .eyebrow {
+          font-size: 0.74rem;
+          padding: 0.34rem 0.6rem;
+        }
+
+        .sample-card {
+          order: -1;
+          padding: 0.55rem;
+        }
+
+        .sample-card__header {
+          margin-bottom: 0.4rem;
+        }
+
+        .sample-card__header strong {
+          font-size: 0.84rem;
+        }
+
+        .sample-badge {
+          font-size: 0.7rem;
+        }
+
+        .telegram-bubble {
+          padding: 0.55rem;
+        }
+
+        .telegram-bubble p {
+          margin: 0.1rem 0;
+          font-size: 0.78rem;
+        }
+
+        .pill-row {
+          margin-top: 0.35rem;
+        }
+
+        .pill {
+          font-size: 0.68rem;
+          padding: 0.24rem 0.5rem;
+        }
+
+        .hero p {
+          font-size: 0.78rem;
+          line-height: 1.4;
+        }
+
+        .hero__cta {
+          gap: 0.4rem;
+          margin-top: 0.2rem;
+        }
+
+        .btn {
+          padding: 0.75rem 0.95rem;
+          font-size: 0.92rem;
+        }
+
+        .trust-line {
+          font-size: 0.8rem;
+        }
+
+        h1 {
+          font-size: 1.46rem;
+          max-width: 9.5ch;
+          margin-bottom: 0.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero container">
+      <div class="hero__top">
+        <div class="brand">
+          <span class="brand__dot"></span>
+          AB Signal
+        </div>
+      </div>
+      <div class="hero__content">
+        <div>
+          <div class="eyebrow">Telegram-first crypto signals</div>
+          <h1>AI-scored crypto signals delivered to Telegram in real time.</h1>
+          <p>
+            Every signal includes entry, stop loss, and a 3-tier take-profit ladder — scored 1-10 by AI before it reaches you.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="LAUNCHPASS_URL_PLACEHOLDER">Join AB Signal — $17/mo</a>
+            <div class="trust-line">Cancel anytime.</div>
+          </div>
+        </div>
+        <div class="panel sample-card" aria-label="Mock Telegram alert sample">
+          <div class="sample-card__header">
+            <strong>Sample alert</strong>
+            <span class="sample-badge">Live Telegram</span>
+          </div>
+          <div class="telegram-bubble">
+            <p>🟢 LONG SOLUSDT [BRK] (4H)</p>
+            <p>Score: 8/10</p>
+            <p>R:R to TP1: 2.1</p>
+            <p>Entry / SL / TP1-3 levels</p>
+            <p>Funding, OI, BTC trend line</p>
+            <p>3-line AI summary</p>
+          </div>
+          <div class="pill-row">
+            <span class="pill">Breakout</span>
+            <span class="pill">Funding context</span>
+            <span class="pill">OI context</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section" id="how-it-works">
+        <div class="section__heading">
+          <h2>How it works</h2>
+          <p>Transparent process, not hype.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step__number">1</div>
+            <h3>Proprietary Breakout Stack</h3>
+            <p>Our engine scans 20 crypto futures pairs 24/7 for multi-factor confluence across momentum, trend, volume, order flow, and market structure.</p>
+          </article>
+          <article class="step">
+            <div class="step__number">2</div>
+            <h3>Context-rich scoring</h3>
+            <p>Each setup is enriched with live funding rates, open interest, and BTC trend context before it is scored 1-10 by AI.</p>
+          </article>
+          <article class="step">
+            <div class="step__number">3</div>
+            <h3>Instant Telegram delivery</h3>
+            <p>Ranked setups with exact entry, stop loss, and 3-tier take-profit levels reach your Telegram immediately.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="section__heading">
+          <h2>What you get</h2>
+          <p>Clear levels and context on every signal.</p>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M4 6h16M7 6v12m10-12v12M4 12h16" stroke="#2ef0a3" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Real-time Telegram delivery</h3>
+            <p>Alerts land directly in Telegram so you can react without switching tools.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4v16m0-16 7 5m-7-5-7 5m14 6-7 5-7-5" stroke="#2ef0a3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>AI quality score</h3>
+            <p>Every setup is scored 1-10 with context-weighted reasoning before delivery.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M5 16 10 8l3 4 6-8" stroke="#2ef0a3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 16h14" stroke="#2ef0a3" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Exact entry and levels</h3>
+            <p>Each signal includes entry, stop loss, and a 3-tier take-profit ladder.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M7 4h10l3 4v12H4V8l3-4Z" stroke="#2ef0a3" stroke-width="1.8" stroke-linejoin="round" />
+                <path d="M9 12h6" stroke="#2ef0a3" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Breakout and reversal setups</h3>
+            <p>Signals cover both breakout and reversal opportunities across active conditions.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19h16M7 15l3-3 2 2 5-6" stroke="#2ef0a3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>20-pair coverage</h3>
+            <p>Track setups across mega, large, and mid-cap crypto futures pairs with market context.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M6 6h12v12H6z" stroke="#2ef0a3" stroke-width="1.8" />
+                <path d="M8 10h8M8 14h5" stroke="#2ef0a3" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Funding and OI context</h3>
+            <p>Signals are delivered with funding-rate and open-interest context to support decision-making.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="section__heading">
+          <h2>Pricing</h2>
+          <p>One straightforward tier, no clutter.</p>
+        </div>
+        <div class="panel pricing">
+          <div class="eyebrow">Launchpass access</div>
+          <p class="price">$67/month</p>
+          <p>Premium Telegram signal access with full risk levels, AI scoring, and market context on every setup.</p>
+          <ul>
+            <li>Real-time Telegram delivery</li>
+            <li>AI quality score on every signal</li>
+            <li>Exact entry / stop loss / 3-tier take-profit levels</li>
+            <li>Breakout and reversal setups</li>
+            <li>20-pair coverage with funding and OI context</li>
+          </ul>
+          <a class="btn btn--primary" href="LAUNCHPASS_URL_PLACEHOLDER">Join AB Signal — $17/mo</a>
+          <div class="trust-line" style="margin-top: 0.75rem;">Cancel anytime.</div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="section__heading">
+          <h2>FAQ</h2>
+          <p>Questions subscribers ask most often.</p>
+        </div>
+        <details open>
+          <summary>What markets are covered?</summary>
+          <p>AB Signal focuses on crypto futures across major, large, and mid-cap pairs with active liquidity and clear technical structure.</p>
+        </details>
+        <details>
+          <summary>How many signals per week?</summary>
+          <p>Quality comes before quantity. Subscribers typically receive several setups per week depending on market conditions and signal quality.</p>
+        </details>
+        <details>
+          <summary>Do I need trading experience?</summary>
+          <p>Signals include full entry, stop-loss, and take-profit levels, but subscribers make their own trading decisions based on their judgment and risk tolerance.</p>
+        </details>
+        <details>
+          <summary>Can I cancel?</summary>
+          <p>Yes. Membership is flexible and can be canceled at any time.</p>
+        </details>
+        <details>
+          <summary>How do I get access after paying?</summary>
+          <p>Launchpass automatically sends access to the private Telegram channel after payment is completed.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> AB Signal provides informational content only and is not financial, investment, or trading advice. Trading cryptocurrency involves substantial risk of loss and is not suitable for every investor. Past performance does not guarantee future results. Never trade with funds you cannot afford to lose. Subscribers are solely responsible for their own trading decisions.
+        </div>
+        <div class="copyright">© 2026 AB Signal. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const year = new Date().getFullYear();
+        const footerYear = document.querySelector('.copyright');
+        if (footerYear) {
+          footerYear.textContent = `© ${year} AB Signal. All rights reserved.`;
+        }
+      });
+    </script>
+  </body>
+</html>
