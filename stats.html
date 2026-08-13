@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AB Signal's verifiable public track record — every signal tracked, wins and losses, with win rate, average R, profit factor, and a full per-signal ledger."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://alanbswll.github.io/absignal-site/stats.html" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>AB Signal — Track Record</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AB Signal" />
+    <meta property="og:url" content="https://alanbswll.github.io/absignal-site/stats.html" />
+    <meta property="og:title" content="AB Signal — Track Record" />
+    <meta
+      property="og:description"
+      content="Every signal tracked — wins and losses. Win rate, average R, profit factor, and a full per-signal ledger, updated automatically."
+    />
+
+    <style>
+      :root {
+        --bg: #04070b;
+        --surface: #0b1218;
+        --text: #f5f7fb;
+        --muted: #94a3b8;
+        --accent: #2ef0a3;
+        --accent-strong: #1fd58c;
+        --accent-soft: rgba(46, 240, 163, 0.16);
+        --loss: #ff6b6b;
+        --loss-soft: rgba(255, 107, 107, 0.14);
+        --border: rgba(255, 255, 255, 0.08);
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        --radius: 24px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(46, 240, 163, 0.14), transparent 26%),
+          linear-gradient(180deg, #060910 0%, var(--bg) 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      header.top {
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .top__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 0.82rem;
+        color: #c9d4e0;
+        text-decoration: none;
+      }
+
+      .brand__dot {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), #7bfcc7);
+        box-shadow: 0 0 20px rgba(46, 240, 163, 0.55);
+      }
+
+      nav.top__nav {
+        display: flex;
+        gap: 1.3rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      nav.top__nav a {
+        text-decoration: none;
+        color: var(--muted);
+      }
+
+      nav.top__nav a.current {
+        color: var(--accent);
+      }
+
+      main {
+        padding: 1.6rem 0 2.4rem;
+      }
+
+      .intro h1 {
+        font-size: clamp(1.6rem, 4vw, 2.4rem);
+        margin: 0 0 0.35rem;
+        letter-spacing: -0.02em;
+      }
+
+      .intro p {
+        margin: 0;
+        color: var(--muted);
+        max-width: 60ch;
+      }
+
+      .updated {
+        margin-top: 0.6rem;
+        font-size: 0.82rem;
+        color: #70808e;
+      }
+
+      .panel {
+        background: linear-gradient(180deg, rgba(13, 20, 28, 0.96), rgba(8, 14, 19, 0.96));
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      section {
+        margin-top: 1.6rem;
+      }
+
+      section h2 {
+        font-size: 1.1rem;
+        margin: 0 0 0.8rem;
+      }
+
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+      }
+
+      .tile {
+        padding: 1rem;
+        border-radius: 18px;
+        background: rgba(10, 17, 24, 0.95);
+        border: 1px solid var(--border);
+      }
+
+      .tile__label {
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+
+      .tile__value {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-top: 0.3rem;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .tile__value.pos { color: var(--accent); }
+      .tile__value.neg { color: var(--loss); }
+
+      .chart-panel {
+        padding: 1.2rem;
+      }
+
+      .chart-panel .hint {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin: -0.4rem 0 0.9rem;
+      }
+
+      .chart {
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+      }
+
+      .chart-bar {
+        cursor: default;
+      }
+
+      .chart-bar rect {
+        transition: opacity 0.15s ease;
+      }
+
+      .chart-bar:hover rect {
+        opacity: 0.8;
+      }
+
+      .chart-label {
+        font-size: 10px;
+        fill: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      table.data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.86rem;
+      }
+
+      table.data-table caption {
+        caption-side: top;
+        text-align: left;
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-bottom: 0.5rem;
+      }
+
+      table.data-table th,
+      table.data-table td {
+        padding: 0.55rem 0.7rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        white-space: nowrap;
+      }
+
+      table.data-table th {
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      table.data-table td.num {
+        font-variant-numeric: tabular-nums;
+        text-align: right;
+      }
+
+      td.pos { color: var(--accent); }
+      td.neg { color: var(--loss); }
+
+      .table-scroll {
+        overflow-x: auto;
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        background: rgba(10, 17, 24, 0.95);
+      }
+
+      .table-scroll table.data-table {
+        margin: 0;
+      }
+
+      .table-scroll th,
+      .table-scroll td {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .breakdown-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .ledger-scroll {
+        max-height: 520px;
+        overflow-y: auto;
+      }
+
+      tr.result-loss {
+        background: var(--loss-soft);
+      }
+
+      tr.result-win {
+        background: var(--accent-soft);
+      }
+
+      .empty-state {
+        padding: 2rem 1.2rem;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      .disclaimer {
+        margin-top: 2rem;
+        padding: 1rem;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 127, 80, 0.16);
+        background: rgba(255, 127, 80, 0.06);
+        color: #d8c0ad;
+        font-size: 0.9rem;
+      }
+
+      footer.site-footer {
+        padding: 1.6rem 0 2.4rem;
+      }
+
+      .copyright {
+        margin-top: 0.9rem;
+        color: #70808e;
+        font-size: 0.84rem;
+      }
+
+      @media (min-width: 640px) {
+        .tiles {
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="container top__row">
+        <a class="brand" href="index.html">
+          <span class="brand__dot"></span>
+          AB Signal
+        </a>
+        <nav class="top__nav">
+          <a href="index.html">Home</a>
+          <a href="stats.html" class="current">Track record</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="intro">
+        <h1>Verifiable track record</h1>
+        <p>Every signal tracked — wins and losses. No cherry-picking, no hidden losing months: this page is generated directly from the same signal-outcome database the alerts come from.</p>
+        <div class="updated" id="updated-line">Loading…</div>
+      </div>
+
+      <div id="content" hidden>
+        <section id="tiles-section">
+          <div class="tiles" id="tiles"></div>
+        </section>
+
+        <section class="panel chart-panel">
+          <h2>Monthly performance (avg R)</h2>
+          <p class="hint">Bars above the line are winning months, below are losing months — deliberately shown either way.</p>
+          <svg class="chart" id="chart" viewBox="0 0 600 220" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="chart-title"></svg>
+          <div id="chart-title" style="position:absolute; width:1px; height:1px; overflow:hidden;">Average R multiple by month</div>
+        </section>
+
+        <section>
+          <h2>By month</h2>
+          <div class="table-scroll">
+            <table class="data-table" id="month-table">
+              <thead>
+                <tr><th>Month</th><th class="num">Signals</th><th class="num">Win rate</th><th class="num">Avg R</th><th class="num">Profit factor</th><th class="num">Max drawdown</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="breakdown-grid">
+          <div>
+            <h2>By signal type</h2>
+            <div class="table-scroll">
+              <table class="data-table" id="type-table">
+                <thead>
+                  <tr><th>Type</th><th class="num">Signals</th><th class="num">Win rate</th><th class="num">Avg R</th><th class="num">Profit factor</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h2>By AI score band</h2>
+            <div class="table-scroll">
+              <table class="data-table" id="band-table">
+                <thead>
+                  <tr><th>Score</th><th class="num">Signals</th><th class="num">Win rate</th><th class="num">Avg R</th><th class="num">Profit factor</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Per-signal ledger</h2>
+          <p class="hint" style="margin: -0.4rem 0 0.9rem; color: var(--muted); font-size: 0.8rem;">Date, pair, direction, type, AI score, result, and R multiple for every completed signal. Entry/stop/take-profit levels aren't published here — those go to subscribers only.</p>
+          <div class="table-scroll ledger-scroll">
+            <table class="data-table" id="ledger-table">
+              <thead>
+                <tr><th>Date</th><th>Pair</th><th>Direction</th><th>Type</th><th class="num">Score</th><th>Result</th><th class="num">R</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <div id="empty-state" class="panel empty-state" hidden>
+        <p><strong>Track record not published yet.</strong></p>
+        <p>Check back soon — stats are generated automatically from live signal outcomes.</p>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> Past performance does not guarantee future results. This track record is informational only and is not financial, investment, or trading advice. Trading cryptocurrency involves substantial risk of loss.
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="copyright" id="footer-copyright">© 2026 AB Signal. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const fmtPct = (v) => (v === null || v === undefined ? 'n/a' : (v * 100).toFixed(1) + '%');
+        const fmtR = (v) => (v === null || v === undefined ? 'n/a' : (v >= 0 ? '+' : '') + v.toFixed(2) + 'R');
+        const fmtNum = (v) => (v === null || v === undefined ? 'n/a' : v.toFixed(2));
+        const signClass = (v) => (v === null || v === undefined ? '' : (v >= 0 ? 'pos' : 'neg'));
+
+        function renderTiles(overall) {
+          const tiles = [
+            { label: 'Signals tracked', value: String(overall.count) },
+            { label: 'Win rate', value: fmtPct(overall.win_rate) },
+            { label: 'Avg R', value: fmtR(overall.avg_r), cls: signClass(overall.avg_r) },
+            { label: 'Profit factor', value: fmtNum(overall.profit_factor) },
+            { label: 'Max drawdown', value: overall.max_drawdown_r.toFixed(2) + 'R' },
+          ];
+          const el = document.getElementById('tiles');
+          el.innerHTML = tiles
+            .map(
+              (t) =>
+                '<div class="tile"><div class="tile__label">' + t.label + '</div>' +
+                '<div class="tile__value ' + (t.cls || '') + '">' + t.value + '</div></div>'
+            )
+            .join('');
+        }
+
+        function renderChart(byMonth) {
+          const months = Object.keys(byMonth);
+          const svg = document.getElementById('chart');
+          if (months.length === 0) {
+            svg.innerHTML = '';
+            return;
+          }
+          const values = months.map((m) => byMonth[m].avg_r || 0);
+          const maxAbs = Math.max(0.5, ...values.map((v) => Math.abs(v)));
+          const width = 600, height = 220, padding = 28;
+          const zeroY = height / 2;
+          const usableHalf = height / 2 - padding;
+          const barWidth = Math.min(48, (width - padding * 2) / months.length - 8);
+          const step = (width - padding * 2) / months.length;
+
+          let svgContent = '<line x1="' + padding + '" y1="' + zeroY + '" x2="' + (width - padding) + '" y2="' + zeroY + '" stroke="rgba(255,255,255,0.15)" stroke-width="1" />';
+
+          months.forEach((m, i) => {
+            const v = values[i];
+            const barHeight = Math.abs(v) / maxAbs * usableHalf;
+            const x = padding + i * step + (step - barWidth) / 2;
+            const y = v >= 0 ? zeroY - barHeight : zeroY;
+            const color = v >= 0 ? 'var(--accent)' : 'var(--loss)';
+            const label = m.slice(2); // "2026-08" -> "26-08"
+            svgContent +=
+              '<g class="chart-bar"><title>' + m + ': ' + fmtR(v) + ' avg (' + byMonth[m].count + ' signals)</title>' +
+              '<rect x="' + x + '" y="' + y + '" width="' + barWidth + '" height="' + Math.max(2, barHeight) + '" rx="4" fill="' + color + '" />' +
+              '<text class="chart-label" x="' + (x + barWidth / 2) + '" y="' + (height - 8) + '" text-anchor="middle">' + label + '</text>' +
+              '</g>';
+          });
+
+          svg.innerHTML = svgContent;
+        }
+
+        function renderMonthTable(byMonth) {
+          const tbody = document.querySelector('#month-table tbody');
+          tbody.innerHTML = Object.keys(byMonth)
+            .map((m) => {
+              const s = byMonth[m];
+              return (
+                '<tr><td>' + m + '</td><td class="num">' + s.count + '</td><td class="num">' + fmtPct(s.win_rate) +
+                '</td><td class="num ' + signClass(s.avg_r) + '">' + fmtR(s.avg_r) + '</td><td class="num">' +
+                fmtNum(s.profit_factor) + '</td><td class="num">' + s.max_drawdown_r.toFixed(2) + 'R</td></tr>'
+              );
+            })
+            .join('');
+        }
+
+        function renderBreakdownTable(tableId, groups, labelForKey) {
+          const tbody = document.querySelector('#' + tableId + ' tbody');
+          tbody.innerHTML = Object.keys(groups)
+            .map((key) => {
+              const s = groups[key];
+              return (
+                '<tr><td>' + (labelForKey ? labelForKey(key) : key) + '</td><td class="num">' + s.count +
+                '</td><td class="num">' + fmtPct(s.win_rate) + '</td><td class="num ' + signClass(s.avg_r) + '">' +
+                fmtR(s.avg_r) + '</td><td class="num">' + fmtNum(s.profit_factor) + '</td></tr>'
+              );
+            })
+            .join('');
+        }
+
+        function renderLedger(ledger) {
+          const tbody = document.querySelector('#ledger-table tbody');
+          tbody.innerHTML = ledger
+            .map((row) => {
+              const isLoss = row.r !== null && row.r !== undefined && row.r < 0;
+              const isWin = row.r !== null && row.r !== undefined && row.r > 0;
+              const rowClass = isLoss ? 'result-loss' : isWin ? 'result-win' : '';
+              const date = row.date ? row.date.slice(0, 10) : 'n/a';
+              const score = row.score === null || row.score === undefined ? 'n/a' : row.score;
+              return (
+                '<tr class="' + rowClass + '"><td>' + date + '</td><td>' + row.pair + '</td><td>' + row.direction +
+                '</td><td>' + row.type + '</td><td class="num">' + score + '</td><td>' + row.result +
+                '</td><td class="num ' + signClass(row.r) + '">' + fmtR(row.r) + '</td></tr>'
+              );
+            })
+            .join('');
+        }
+
+        fetch('./stats.json', { cache: 'no-store' })
+          .then((r) => {
+            if (!r.ok) throw new Error('not found');
+            return r.json();
+          })
+          .then((stats) => {
+            document.getElementById('updated-line').textContent =
+              'Last updated: ' + new Date(stats.generated_at).toUTCString();
+
+            if (!stats.overall || stats.overall.count === 0) {
+              document.getElementById('empty-state').hidden = false;
+              document.getElementById('content').hidden = true;
+              return;
+            }
+
+            renderTiles(stats.overall);
+            renderChart(stats.by_month);
+            renderMonthTable(stats.by_month);
+            renderBreakdownTable('type-table', stats.by_type);
+            renderBreakdownTable('band-table', stats.by_score_band);
+            renderLedger(stats.ledger);
+            document.getElementById('content').hidden = false;
+          })
+          .catch(function () {
+            document.getElementById('updated-line').textContent = '';
+            document.getElementById('empty-state').hidden = false;
+            document.getElementById('content').hidden = true;
+          });
+
+        document.getElementById('footer-copyright').textContent = '© ' + new Date().getFullYear() + ' AB Signal. All rights reserved.';
+      })();
+    </script>
+  </body>
+</html>

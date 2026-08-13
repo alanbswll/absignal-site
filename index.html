@@ -96,6 +96,22 @@
         color: #c9d4e0;
       }
 
+      .top-nav {
+        display: flex;
+        gap: 1.2rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .top-nav a {
+        text-decoration: none;
+        color: var(--muted);
+      }
+
+      .top-nav a:hover {
+        color: var(--text);
+      }
+
       .brand__dot {
         width: 0.8rem;
         height: 0.8rem;
@@ -516,6 +532,9 @@
           <span class="brand__dot"></span>
           AB Signal
         </div>
+        <nav class="top-nav">
+          <a href="stats.html">Track record</a>
+        </nav>
       </div>
       <div class="hero__content">
         <div>
@@ -526,7 +545,7 @@
           </p>
           <div class="hero__cta">
             <a class="btn btn--primary" href="https://www.launchpass.com/alanbswll97/breakout_crypto_signals">Join AB Signal — $17/mo</a>
-            <div class="trust-line">Cancel anytime.</div>
+            <div class="trust-line">Cancel anytime. <a href="stats.html" style="color: var(--accent); text-decoration: underline;">Every signal tracked — wins and losses.</a></div>
           </div>
         </div>
         <div class="panel sample-card" aria-label="Real Telegram alert sample">
@@ -682,6 +701,10 @@
         <details>
           <summary>How do I get access after paying?</summary>
           <p>Launchpass automatically sends access to the private Telegram channel after payment is completed.</p>
+        </details>
+        <details>
+          <summary>Do you publish your actual results?</summary>
+          <p>Yes. Every signal tracked — wins and losses, no cherry-picking. See the <a href="stats.html" style="color: var(--accent); text-decoration: underline;">live track record</a>, generated automatically from the same outcome data behind every alert.</p>
         </details>
       </section>
     </main>
