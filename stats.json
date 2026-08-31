@@ -1,50 +1,50 @@
 {
-  "generated_at": "2026-08-30T00:00:00.178539+00:00",
+  "generated_at": "2026-08-31T00:00:33.077641+00:00",
   "overall": {
-    "count": 1095,
-    "win_rate": 0.4977127172918573,
-    "avg_r": -0.0825563692954808,
-    "profit_factor": 0.8356391409108181,
+    "count": 1132,
+    "win_rate": 0.5061946902654867,
+    "avg_r": -0.0770689133768455,
+    "profit_factor": 0.8438503094426231,
     "max_drawdown_r": 124.17458680027144
   },
   "by_month": {
     "2026-08": {
-      "count": 1095,
-      "win_rate": 0.4977127172918573,
-      "avg_r": -0.0825563692954808,
-      "profit_factor": 0.8356391409108181,
+      "count": 1132,
+      "win_rate": 0.5061946902654867,
+      "avg_r": -0.0770689133768455,
+      "profit_factor": 0.8438503094426231,
       "max_drawdown_r": 124.17458680027144
     }
   },
   "by_type": {
     "BRK": {
-      "count": 1060,
-      "win_rate": 0.5,
-      "avg_r": -0.08714629329548897,
-      "profit_factor": 0.825707413409022,
+      "count": 1096,
+      "win_rate": 0.5082266910420475,
+      "avg_r": -0.08158550162934392,
+      "profit_factor": 0.8340131148507726,
       "max_drawdown_r": 121.97458680027144
     },
     "REV": {
-      "count": 35,
-      "win_rate": 0.42857142857142855,
-      "avg_r": 0.056190476190478476,
-      "profit_factor": 1.0983333333333376,
+      "count": 36,
+      "win_rate": 0.4444444444444444,
+      "avg_r": 0.060185185185187416,
+      "profit_factor": 1.1083333333333374,
       "max_drawdown_r": 10.19999999999989
     }
   },
   "by_score_band": {
     "4-6": {
-      "count": 484,
-      "win_rate": 0.487551867219917,
-      "avg_r": -0.03407620809114308,
-      "profit_factor": 0.9335031080974445,
+      "count": 495,
+      "win_rate": 0.4969574036511156,
+      "avg_r": -0.02950336600907209,
+      "profit_factor": 0.9412839723786551,
       "max_drawdown_r": 57.17944502011371
     },
     "7-8": {
-      "count": 607,
-      "win_rate": 0.5074135090609555,
-      "avg_r": -0.12049870292152048,
-      "profit_factor": 0.7553755428984514,
+      "count": 633,
+      "win_rate": 0.5150078988941548,
+      "avg_r": -0.11354825593474926,
+      "profit_factor": 0.7658760716394257,
       "max_drawdown_r": 79.66032711568188
     },
     "9-10": {
@@ -56,6 +56,339 @@
     }
   },
   "ledger": [
+    {
+      "date": "2026-08-30T23:15:00+00:00",
+      "pair": "AAVEUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "TP3_HIT",
+      "r": 1.2666666666666675
+    },
+    {
+      "date": "2026-08-30T23:15:00+00:00",
+      "pair": "BCHUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "TP3_HIT",
+      "r": 1.2666666666666677
+    },
+    {
+      "date": "2026-08-30T23:15:00+00:00",
+      "pair": "SUIUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "TP3_HIT",
+      "r": 1.266666666666674
+    },
+    {
+      "date": "2026-08-30T22:30:00+00:00",
+      "pair": "ETHUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666666
+    },
+    {
+      "date": "2026-08-30T22:15:00+00:00",
+      "pair": "BTCUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2666666666666608
+    },
+    {
+      "date": "2026-08-30T22:00:00+00:00",
+      "pair": "DOTUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-30T21:00:00+00:00",
+      "pair": "DOGEUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.8
+    },
+    {
+      "date": "2026-08-30T21:00:00+00:00",
+      "pair": "SOLUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.8
+    },
+    {
+      "date": "2026-08-30T21:00:00+00:00",
+      "pair": "1000SHIBUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.6000000000000001
+    },
+    {
+      "date": "2026-08-30T21:00:00+00:00",
+      "pair": "LTCUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.266666666666663
+    },
+    {
+      "date": "2026-08-30T21:00:00+00:00",
+      "pair": "ADAUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666666
+    },
+    {
+      "date": "2026-08-30T18:45:00+00:00",
+      "pair": "NEARUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666505
+    },
+    {
+      "date": "2026-08-30T17:15:00+00:00",
+      "pair": "XLMUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-30T17:15:00+00:00",
+      "pair": "FILUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.19999999999999585
+    },
+    {
+      "date": "2026-08-30T17:00:00+00:00",
+      "pair": "AAVEUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.266666666666663
+    },
+    {
+      "date": "2026-08-30T16:45:00+00:00",
+      "pair": "DOGEUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2666666666666708
+    },
+    {
+      "date": "2026-08-30T16:15:00+00:00",
+      "pair": "AVAXUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-30T16:15:00+00:00",
+      "pair": "AKTUSDT",
+      "direction": "LONG",
+      "type": "REV",
+      "score": 5.0,
+      "result": "STOPPED",
+      "r": 0.2
+    },
+    {
+      "date": "2026-08-30T13:45:00+00:00",
+      "pair": "TAOUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-30T12:45:00+00:00",
+      "pair": "SOLUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.8000000000000114
+    },
+    {
+      "date": "2026-08-30T12:15:00+00:00",
+      "pair": "ETHUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-30T12:00:00+00:00",
+      "pair": "FILUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.2
+    },
+    {
+      "date": "2026-08-30T12:00:00+00:00",
+      "pair": "AVAXUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2666666666666709
+    },
+    {
+      "date": "2026-08-30T11:30:00+00:00",
+      "pair": "RENDERUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-30T10:30:00+00:00",
+      "pair": "AKTUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.200000000000006
+    },
+    {
+      "date": "2026-08-30T10:15:00+00:00",
+      "pair": "ETHUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.266666666666678
+    },
+    {
+      "date": "2026-08-30T10:15:00+00:00",
+      "pair": "BTCUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 8.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-30T10:00:00+00:00",
+      "pair": "AAVEUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666433
+    },
+    {
+      "date": "2026-08-30T09:15:00+00:00",
+      "pair": "1000SHIBUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.5,
+      "result": "STOPPED",
+      "r": 0.2
+    },
+    {
+      "date": "2026-08-30T08:30:00+00:00",
+      "pair": "SUIUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "INVALIDATED",
+      "r": -0.720427142541569
+    },
+    {
+      "date": "2026-08-30T07:30:00+00:00",
+      "pair": "1000SHIBUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.2
+    },
+    {
+      "date": "2026-08-30T06:45:00+00:00",
+      "pair": "XLMUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666666
+    },
+    {
+      "date": "2026-08-30T06:15:00+00:00",
+      "pair": "ZECUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-30T02:30:00+00:00",
+      "pair": "DOTUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2666666666666703
+    },
+    {
+      "date": "2026-08-30T02:00:00+00:00",
+      "pair": "FILUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.19999999999999407
+    },
+    {
+      "date": "2026-08-30T01:00:00+00:00",
+      "pair": "AVAXUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2666666666666565
+    },
+    {
+      "date": "2026-08-30T00:15:00+00:00",
+      "pair": "HBARUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.19999999999998924
+    },
     {
       "date": "2026-08-29T21:00:00+00:00",
       "pair": "NEARUSDT",
