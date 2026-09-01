@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-08-31T00:00:33.077641+00:00",
+  "generated_at": "2026-09-01T00:00:00.091001+00:00",
   "overall": {
-    "count": 1132,
-    "win_rate": 0.5061946902654867,
-    "avg_r": -0.0770689133768455,
-    "profit_factor": 0.8438503094426231,
+    "count": 1142,
+    "win_rate": 0.5043859649122807,
+    "avg_r": -0.08188994630044043,
+    "profit_factor": 0.8346889287237719,
     "max_drawdown_r": 124.17458680027144
   },
   "by_month": {
     "2026-08": {
-      "count": 1132,
-      "win_rate": 0.5061946902654867,
-      "avg_r": -0.0770689133768455,
-      "profit_factor": 0.8438503094426231,
+      "count": 1142,
+      "win_rate": 0.5043859649122807,
+      "avg_r": -0.08188994630044043,
+      "profit_factor": 0.8346889287237719,
       "max_drawdown_r": 124.17458680027144
     }
   },
   "by_type": {
     "BRK": {
-      "count": 1096,
-      "win_rate": 0.5082266910420475,
-      "avg_r": -0.08158550162934392,
-      "profit_factor": 0.8340131148507726,
+      "count": 1106,
+      "win_rate": 0.5063405797101449,
+      "avg_r": -0.08652283102279792,
+      "profit_factor": 0.8246417782600001,
       "max_drawdown_r": 121.97458680027144
     },
     "REV": {
@@ -34,17 +34,17 @@
   },
   "by_score_band": {
     "4-6": {
-      "count": 495,
-      "win_rate": 0.4969574036511156,
-      "avg_r": -0.02950336600907209,
-      "profit_factor": 0.9412839723786551,
+      "count": 500,
+      "win_rate": 0.4959839357429719,
+      "avg_r": -0.03429416220041338,
+      "profit_factor": 0.9318823241869458,
       "max_drawdown_r": 57.17944502011371
     },
     "7-8": {
-      "count": 633,
-      "win_rate": 0.5150078988941548,
-      "avg_r": -0.11354825593474926,
-      "profit_factor": 0.7658760716394257,
+      "count": 638,
+      "win_rate": 0.512539184952978,
+      "avg_r": -0.11850999896556366,
+      "profit_factor": 0.7568830246301298,
       "max_drawdown_r": 79.66032711568188
     },
     "9-10": {
@@ -56,6 +56,96 @@
     }
   },
   "ledger": [
+    {
+      "date": "2026-08-31T23:15:00+00:00",
+      "pair": "NEARUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666805
+    },
+    {
+      "date": "2026-08-31T19:45:00+00:00",
+      "pair": "LINKUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666666
+    },
+    {
+      "date": "2026-08-31T19:15:00+00:00",
+      "pair": "FILUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.20000000000000304
+    },
+    {
+      "date": "2026-08-31T14:30:00+00:00",
+      "pair": "ETHUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-31T14:30:00+00:00",
+      "pair": "HBARUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-31T14:30:00+00:00",
+      "pair": "BTCUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-31T14:30:00+00:00",
+      "pair": "AKTUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-31T14:30:00+00:00",
+      "pair": "ZECUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-31T11:30:00+00:00",
+      "pair": "AVAXUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-08-31T10:15:00+00:00",
+      "pair": "LTCUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
     {
       "date": "2026-08-30T23:15:00+00:00",
       "pair": "AAVEUSDT",
