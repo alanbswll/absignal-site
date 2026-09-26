@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-25T00:01:17.098792+00:00",
+  "generated_at": "2026-09-26T00:00:47.967571+00:00",
   "overall": {
-    "count": 1773,
-    "win_rate": 0.5511010728402033,
-    "avg_r": -0.09269613367779488,
-    "profit_factor": 0.7933376820957387,
-    "max_drawdown_r": 180.16485274337495
+    "count": 1791,
+    "win_rate": 0.5511458915595304,
+    "avg_r": -0.09395161552155798,
+    "profit_factor": 0.7905193947244992,
+    "max_drawdown_r": 184.28151941004162
   },
   "by_month": {
     "2026-08": {
@@ -16,20 +16,20 @@
       "max_drawdown_r": 124.17458680027144
     },
     "2026-09": {
-      "count": 556,
-      "win_rate": 0.6169064748201439,
-      "avg_r": -0.15486402209136454,
-      "profit_factor": 0.5950740933929484,
-      "max_drawdown_r": 86.77106294946536
+      "count": 574,
+      "win_rate": 0.6149825783972126,
+      "avg_r": -0.15682749774824253,
+      "profit_factor": 0.5920140273068348,
+      "max_drawdown_r": 90.88772961613203
     }
   },
   "by_type": {
     "BRK": {
-      "count": 1729,
-      "win_rate": 0.5535610885929357,
-      "avg_r": -0.09449808110984839,
-      "profit_factor": 0.7881541126366909,
-      "max_drawdown_r": 168.69818607670834
+      "count": 1747,
+      "win_rate": 0.5535816618911175,
+      "avg_r": -0.09576663237902619,
+      "profit_factor": 0.7853022029725925,
+      "max_drawdown_r": 172.81485274337504
     },
     "REV": {
       "count": 44,
@@ -48,18 +48,18 @@
       "max_drawdown_r": 1.0
     },
     "4-6": {
-      "count": 740,
-      "win_rate": 0.5365853658536586,
-      "avg_r": -0.06993325130530048,
-      "profit_factor": 0.8489679417327181,
-      "max_drawdown_r": 77.77740612997844
+      "count": 743,
+      "win_rate": 0.5371120107962213,
+      "avg_r": -0.07045983733240456,
+      "profit_factor": 0.8476579295298386,
+      "max_drawdown_r": 78.37740612997847
     },
     "7-8": {
-      "count": 1021,
-      "win_rate": 0.5612144955925563,
-      "avg_r": -0.10990445158288983,
-      "profit_factor": 0.7493256723544002,
-      "max_drawdown_r": 112.47911173279715
+      "count": 1036,
+      "win_rate": 0.5608108108108109,
+      "avg_r": -0.11151257962434656,
+      "profit_factor": 0.7458946960456588,
+      "max_drawdown_r": 115.72911173279718
     },
     "9-10": {
       "count": 5,
@@ -70,6 +70,168 @@
     }
   },
   "ledger": [
+    {
+      "date": "2026-09-25T22:45:00+00:00",
+      "pair": "BCHUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.20207924197415164
+    },
+    {
+      "date": "2026-09-25T21:15:00+00:00",
+      "pair": "FILUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-09-25T21:00:00+00:00",
+      "pair": "TAOUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.5,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-09-25T20:30:00+00:00",
+      "pair": "BTCUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-09-25T16:15:00+00:00",
+      "pair": "XLMUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-09-25T11:00:00+00:00",
+      "pair": "XRPUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666666
+    },
+    {
+      "date": "2026-09-25T10:45:00+00:00",
+      "pair": "SUIUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "TP3_HIT",
+      "r": 1.2666666666666657
+    },
+    {
+      "date": "2026-09-25T10:00:00+00:00",
+      "pair": "ETHUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-09-25T10:00:00+00:00",
+      "pair": "BTCUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 8.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-09-25T09:45:00+00:00",
+      "pair": "AKTUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.19999999999999818
+    },
+    {
+      "date": "2026-09-25T09:45:00+00:00",
+      "pair": "RENDERUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "TP3_HIT",
+      "r": 0.9500000000000028
+    },
+    {
+      "date": "2026-09-25T09:45:00+00:00",
+      "pair": "ZECUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2
+    },
+    {
+      "date": "2026-09-25T05:30:00+00:00",
+      "pair": "BNBUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-09-25T03:15:00+00:00",
+      "pair": "BNBUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666667166
+    },
+    {
+      "date": "2026-09-25T02:15:00+00:00",
+      "pair": "BNBUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666083
+    },
+    {
+      "date": "2026-09-25T02:00:00+00:00",
+      "pair": "PAXGUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 5.0,
+      "result": "STOPPED",
+      "r": 0.19999999999998255
+    },
+    {
+      "date": "2026-09-25T01:30:00+00:00",
+      "pair": "ETHUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-09-25T00:00:00+00:00",
+      "pair": "XLMUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2666666666666681
+    },
     {
       "date": "2026-09-24T14:45:00+00:00",
       "pair": "AVAXUSDT",
