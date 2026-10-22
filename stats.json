@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-21T00:00:49.384599+00:00",
+  "generated_at": "2026-10-22T00:00:18.487011+00:00",
   "overall": {
-    "count": 2249,
-    "win_rate": 0.5585224744103249,
-    "avg_r": -0.1147156344010796,
-    "profit_factor": 0.7399881895004009,
-    "max_drawdown_r": 273.7660304992261
+    "count": 2267,
+    "win_rate": 0.5589403973509933,
+    "avg_r": -0.11518693606688181,
+    "profit_factor": 0.7386737404353421,
+    "max_drawdown_r": 279.54936383255944
   },
   "by_month": {
     "2026-08": {
@@ -23,20 +23,20 @@
       "max_drawdown_r": 112.2184065259534
     },
     "2026-10": {
-      "count": 368,
-      "win_rate": 0.5896739130434783,
-      "avg_r": -0.18574411461783386,
-      "profit_factor": 0.5473256014611732,
-      "max_drawdown_r": 69.8371675126962
+      "count": 386,
+      "win_rate": 0.5906735751295337,
+      "avg_r": -0.1851974452632753,
+      "profit_factor": 0.5475556084074414,
+      "max_drawdown_r": 75.62050084602953
     }
   },
   "by_type": {
     "BRK": {
-      "count": 2199,
-      "win_rate": 0.5607646791078744,
-      "avg_r": -0.11603673061715648,
-      "profit_factor": 0.7356464773872933,
-      "max_drawdown_r": 260.432697165893
+      "count": 2217,
+      "win_rate": 0.5611738148984199,
+      "avg_r": -0.11650793537614189,
+      "profit_factor": 0.7343267798815017,
+      "max_drawdown_r": 266.2160304992263
     },
     "REV": {
       "count": 50,
@@ -55,18 +55,18 @@
       "max_drawdown_r": 1.0
     },
     "4-6": {
-      "count": 936,
-      "win_rate": 0.5556745182012848,
-      "avg_r": -0.08588626646408651,
-      "profit_factor": 0.8065738564406729,
-      "max_drawdown_r": 106.38443954412348
+      "count": 939,
+      "win_rate": 0.5560298826040555,
+      "avg_r": -0.08589154946879926,
+      "profit_factor": 0.8064074397174816,
+      "max_drawdown_r": 107.38443954412348
     },
     "7-8": {
-      "count": 1301,
-      "win_rate": 0.5603382013835511,
-      "avg_r": -0.13620798570932852,
-      "profit_factor": 0.690004441650456,
-      "max_drawdown_r": 177.2065894078364
+      "count": 1316,
+      "win_rate": 0.560790273556231,
+      "avg_r": -0.13683613991283405,
+      "profit_factor": 0.6882563056841863,
+      "max_drawdown_r": 181.98992274116972
     },
     "9-10": {
       "count": 5,
@@ -77,6 +77,168 @@
     }
   },
   "ledger": [
+    {
+      "date": "2026-10-21T19:15:00+00:00",
+      "pair": "PAXGUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.38022928254670774
+    },
+    {
+      "date": "2026-10-21T18:45:00+00:00",
+      "pair": "SUIUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666666
+    },
+    {
+      "date": "2026-10-21T17:30:00+00:00",
+      "pair": "AVAXUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666666
+    },
+    {
+      "date": "2026-10-21T16:00:00+00:00",
+      "pair": "NEARUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2666666666666692
+    },
+    {
+      "date": "2026-10-21T15:30:00+00:00",
+      "pair": "FILUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2
+    },
+    {
+      "date": "2026-10-21T15:15:00+00:00",
+      "pair": "SOLUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666666
+    },
+    {
+      "date": "2026-10-21T15:15:00+00:00",
+      "pair": "AAVEUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.2666666666666692
+    },
+    {
+      "date": "2026-10-21T14:00:00+00:00",
+      "pair": "AVAXUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.1373910251918889
+    },
+    {
+      "date": "2026-10-21T13:15:00+00:00",
+      "pair": "RENDERUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": 0.6000000000000001
+    },
+    {
+      "date": "2026-10-21T12:30:00+00:00",
+      "pair": "PAXGUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-21T09:00:00+00:00",
+      "pair": "LINKUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-21T06:45:00+00:00",
+      "pair": "HBARUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-21T06:30:00+00:00",
+      "pair": "SOLUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-21T05:30:00+00:00",
+      "pair": "1000SHIBUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-21T02:00:00+00:00",
+      "pair": "ETHUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-21T02:00:00+00:00",
+      "pair": "AVAXUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-21T00:45:00+00:00",
+      "pair": "ZECUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "TP3_HIT",
+      "r": 0.9500000000000002
+    },
+    {
+      "date": "2026-10-21T00:00:00+00:00",
+      "pair": "XLMUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666666666
+    },
     {
       "date": "2026-10-20T14:15:00+00:00",
       "pair": "PAXGUSDT",
