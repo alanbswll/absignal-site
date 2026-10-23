@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-22T00:00:18.487011+00:00",
+  "generated_at": "2026-10-23T00:00:13.806111+00:00",
   "overall": {
-    "count": 2267,
-    "win_rate": 0.5589403973509933,
-    "avg_r": -0.11518693606688181,
-    "profit_factor": 0.7386737404353421,
+    "count": 2275,
+    "win_rate": 0.5582930048394192,
+    "avg_r": -0.11588872717032732,
+    "profit_factor": 0.7374677605080123,
     "max_drawdown_r": 279.54936383255944
   },
   "by_month": {
@@ -23,19 +23,19 @@
       "max_drawdown_r": 112.2184065259534
     },
     "2026-10": {
-      "count": 386,
-      "win_rate": 0.5906735751295337,
-      "avg_r": -0.1851974452632753,
-      "profit_factor": 0.5475556084074414,
+      "count": 394,
+      "win_rate": 0.5862944162436549,
+      "avg_r": -0.18782456989413948,
+      "profit_factor": 0.5459945979245955,
       "max_drawdown_r": 75.62050084602953
     }
   },
   "by_type": {
     "BRK": {
-      "count": 2217,
-      "win_rate": 0.5611738148984199,
-      "avg_r": -0.11650793537614189,
-      "profit_factor": 0.7343267798815017,
+      "count": 2225,
+      "win_rate": 0.5605038236617184,
+      "avg_r": -0.11722075732110705,
+      "profit_factor": 0.733109711191343,
       "max_drawdown_r": 266.2160304992263
     },
     "REV": {
@@ -55,17 +55,17 @@
       "max_drawdown_r": 1.0
     },
     "4-6": {
-      "count": 939,
-      "win_rate": 0.5560298826040555,
-      "avg_r": -0.08589154946879926,
-      "profit_factor": 0.8064074397174816,
-      "max_drawdown_r": 107.38443954412348
+      "count": 942,
+      "win_rate": 0.5553191489361702,
+      "avg_r": -0.08673444877900524,
+      "profit_factor": 0.8048206969192684,
+      "max_drawdown_r": 107.69704851893161
     },
     "7-8": {
-      "count": 1316,
-      "win_rate": 0.560790273556231,
-      "avg_r": -0.13683613991283405,
-      "profit_factor": 0.6882563056841863,
+      "count": 1321,
+      "win_rate": 0.5601816805450416,
+      "avg_r": -0.1374284835669616,
+      "profit_factor": 0.6873410510805795,
       "max_drawdown_r": 181.98992274116972
     },
     "9-10": {
@@ -77,6 +77,78 @@
     }
   },
   "ledger": [
+    {
+      "date": "2026-10-22T23:00:00+00:00",
+      "pair": "FILUSDT",
+      "direction": "LONG",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-22T15:15:00+00:00",
+      "pair": "LTCUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-22T15:00:00+00:00",
+      "pair": "ETHUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-22T15:00:00+00:00",
+      "pair": "BNBUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
+    {
+      "date": "2026-10-22T08:30:00+00:00",
+      "pair": "XRPUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "STOPPED",
+      "r": 0.26666666666667055
+    },
+    {
+      "date": "2026-10-22T01:30:00+00:00",
+      "pair": "HBARUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "TP3_HIT",
+      "r": 0.9499999999999953
+    },
+    {
+      "date": "2026-10-22T01:30:00+00:00",
+      "pair": "DOGEUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 7.0,
+      "result": "TP3_HIT",
+      "r": 1.2666666666666646
+    },
+    {
+      "date": "2026-10-22T01:15:00+00:00",
+      "pair": "AKTUSDT",
+      "direction": "SHORT",
+      "type": "BRK",
+      "score": 6.0,
+      "result": "STOPPED",
+      "r": -1.0
+    },
     {
       "date": "2026-10-21T19:15:00+00:00",
       "pair": "PAXGUSDT",
